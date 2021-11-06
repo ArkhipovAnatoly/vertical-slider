@@ -1,0 +1,131 @@
+:root {
+  --color-white: #fff;
+  --color-black: #191615;
+  --color-dark: #222;
+  --color-orange: #e57b60;
+  --color-yellow: #e5b57a;
+  --color-gray: #a7c7e3;
+  --color-light-gray: #aaa;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: var(--color-dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  overflow: hidden;
+}
+.left-slider {
+  width: 54%;
+  position: relative;
+  cursor: pointer;
+}
+.left-slider:active {
+  cursor: grab;
+}
+.slides-left {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-white);
+}
+.slide h2 {
+  font-size: 40px;
+}
+
+.slide:nth-child(2),
+.slide:last-child {
+  background-color: var(--color-black);
+}
+.slide:nth-child(3) {
+  background-color: var(--color-orange);
+}
+.slide:nth-child(4) {
+  background-color: var(--color-yellow);
+}
+.slide:first-child,
+.slide:nth-child(5) {
+  background-color: var(--color-gray);
+}
+
+.control {
+  position: absolute;
+  padding: 15px;
+  font-size: 16px;
+  color: var(--color-light-gray);
+  background-color: var(--color-white);
+  opacity: 0.8;
+  cursor: pointer;
+  border: none;
+}
+.control:hover {
+  color: var(--color-dark);
+}
+.next {
+  top: 51%;
+  right: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.prev {
+  top: 46%;
+  right: -44px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 100;
+}
+.moving {
+  transition: transform 0.5s ease-in-out;
+}
+.right-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slides-right {
+  width: 100%;
+  height: 100%;
+}
+.slides-right > div {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.slides-right div:first-child,
+.slides-right div:nth-child(5) {
+  background-image: url('assets/images/jpg/Paris.jpg');
+}
+.slides-right div:nth-child(4) {
+  background-image: url('assets/images/jpg/Prague.jpg');
+}
+
+.slides-right div:nth-child(3) {
+  background-image: url('assets/images/jpg/Rome.jpg');
+}
+.slides-right div:nth-child(2),
+.slides-right div:last-child {
+  background-image: url('assets/images/jpg/Madrid.jpg');
+}
