@@ -38,8 +38,6 @@ clone();
 sliderLeft.style.transform = `translateY(${currentOffsetLeft + 'vh'})`;
 sliderRight.style.transform = `translateY(${currentOffsetRight + 'vh'})`;
 
-info();
-
 function prevSlide() {
   prev.removeEventListener('click', prevSlide);
   next.removeEventListener('click', nextSlide);
@@ -126,15 +124,4 @@ sliderLeft.addEventListener('transitionend', () => {
   document.body.addEventListener('wheel', mouseWheel);
 });
 
-function info() {
-  console.info('1.Функционал исходного проекта: +10');
-  console.info(
-    '2.Обязательный дополнительный функционал - Бесконечный слайдер: +10'
-  );
-  console.info(
-    '3.Дополнительный функционал на выбор-пролистывание слайдера колёсиком мышки: +10'
-  );
-  console.info(
-    '4.Дополнительный функционал на выбор-пролистывание слайдера свайпами мышки (в данном проекте, активация на левом слайдере): +10'
-  );
-}
+
